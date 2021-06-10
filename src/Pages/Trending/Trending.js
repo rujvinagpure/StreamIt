@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import SingleContent from "../../components/SingleContent/SingleContent";
 
 const Trending = () => {
     const [content, setContent] = useState([]);
@@ -19,8 +20,9 @@ setContent(data.results);
         <div>
             <span className="pageTitle">Trending</span>
         <div className="trending">{
-            content && content.map((c) =>(
-                console.log(c)
+            content &&
+            content.map((c) => (
+              <SingleContent />
             ))
         }
 

@@ -1,11 +1,16 @@
-import React from 'react'
+import "./SingleContent.css";
 
-const SingleContent = () => {
-    return (
-        <div>
-            hello
-        </div>
-    );
+const SingleContent = ({
+  id,
+  poster,
+  title,
+  date,
+  media_type,
+  vote_average,
+}) => {
+  return (
+    <div>{title}</div>
+  );
 };
 
 export default SingleContent;

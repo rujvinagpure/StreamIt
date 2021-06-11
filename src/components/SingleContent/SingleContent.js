@@ -10,15 +10,15 @@ const SingleContent = ({
   vote_average,
 }) => {
   return (
-    <div>
+    <div className="media">
         <img 
         className="poster"
         src={poster?`${img_300}/${poster}`:unavailable}/>
     <b className="title">{title}</b>
-    {/* <br/> */}
-    <span className="sunTitle">
+  
+    <span className="subTitle">
         {media_type=="tv" ? "TV Series" : "Movies"}
-        <span className="sunTitle"> {date}</span>
+        <span className="subTitle"> {date}</span>
     </span>
     </div>
   );

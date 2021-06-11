@@ -1,3 +1,4 @@
+import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.css";
 
 const SingleContent = ({
@@ -9,7 +10,17 @@ const SingleContent = ({
   vote_average,
 }) => {
   return (
-    <div>{title}</div>
+    <div>
+        <img 
+        className="poster"
+        src={poster?`${img_300}/${poster}`:unavailable}/>
+    <b className="title">{title}</b>
+    {/* <br/> */}
+    <span className="sunTitle">
+        {media_type=="tv" ? "TV Series" : "Movies"}
+        <span className="sunTitle"> {date}</span>
+    </span>
+    </div>
   );
 };
 
